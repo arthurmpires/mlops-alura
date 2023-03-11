@@ -17,7 +17,7 @@ basic_auth = BasicAuth(app)
 @app.route("/")
 
 def home():
-    return "A Lexy já melhorou faz tempo!! Ela agora está pintando :D"
+    return "Minha primeira API."
 
 @app.route("/sentiment-analysis/<frase>")
 @basic_auth.required
@@ -37,4 +37,5 @@ def quotation():
     price = modelo.predict([dados_input])
     return jsonify(price=price[0])
 
-app.run(debug=True, host="0.0.0.0", port=8080)
+if __name__ == '__main__':
+    app.run(debug=True, host="0.0.0.0", port=8080)

@@ -16,3 +16,4 @@ threadpoolctl==3.1.0
 tqdm==4.64.1
 Werkzeug==2.2.3
 zipp==3.13.0
+gunicorn==19.9.0
